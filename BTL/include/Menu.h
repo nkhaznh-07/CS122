@@ -1,16 +1,8 @@
 #ifndef MENU_H
 #define MENU_H
 
-
-class Menu
-{
-    public:
-        Menu();
-        virtual ~Menu();
-
-    protected:
-
-    private:
+class Menu {
+public:
+    void menu();
 };
-
-#endif // MENU_H
+#endif // MENU.H
