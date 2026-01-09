@@ -3,9 +3,6 @@
 
 #include <iostream>
 
-using namespace std;
-
-
 class Bmp
 {
 private:
@@ -20,12 +17,26 @@ private:
 
 
 public:
+
+    int getChieuRong() const;
+    int getChieuCao() const;
+    int getSoBitMau() const;
+    char* getDuLieu() const;
+    int getKichThuocFile() const;
+    short getLoaiFile() const;
+
+    void setChieuRong(int w);
+    void setChieuCao(int h);
+    void setSoBitMau(int bit);
+    void setLoaiFile(short loai);
+
+
     void Info();
     void LatDoc();
     void LatNgang();
 
-    bool DocAnh(const char* File);
-    bool GhiAnh(const char* File);
+    bool Read(const char* File);
+    bool Write(const char* File);
 
 
 };

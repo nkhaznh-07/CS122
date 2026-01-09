@@ -1,5 +1,71 @@
 #include "Bmp.h"
 
+using namespace std;
+
+/*
+Bmp::Bmp()
+{
+    //ctor
+}
+
+Bmp::~Bmp()
+{
+    //dtor
+}
+*/
+
+int Bmp::getChieuRong() const
+{
+    return ChieuRong;
+}
+
+int Bmp::getChieuCao() const
+{
+    return ChieuCao;
+}
+
+int Bmp::getSoBitMau() const
+{
+    return soBitMau;
+}
+
+char* Bmp::getDuLieu() const
+{
+    return DuLieu;
+}
+
+int Bmp::getKichThuocFile() const
+{
+    return KichThuocFile;
+}
+
+short Bmp::getLoaiFile() const
+{
+    return loaiFile;
+}
+
+
+
+void Bmp::setChieuRong(int w)
+{
+    ChieuRong = w;
+}
+
+void Bmp::setChieuCao(int h)
+{
+    ChieuCao = h;
+}
+
+void Bmp::setSoBitMau(int bit)
+{
+    soBitMau = bit;
+}
+
+void Bmp::setLoaiFile(short loai)
+{
+    loaiFile = loai;
+}
+
 void Bmp::Info()
 {
     cout << "Kich thuoc file: " << KichThuocFile << " bytes" << endl;
@@ -26,25 +92,22 @@ void Bmp::LatNgang()
     {
         for (int x = 0; x < ChieuRong; x++)
         {
-            int l = y *ChieuRong +x;
-            int r = (ChieuRong - x - 1) + y*ChieuRong;
-            swap(DuLieu[l], DuLieu[r]);
+            int left = y *ChieuRong +x;
+            int right = (ChieuRong - x - 1) + y*ChieuRong;
+            swap(DuLieu[left], DuLieu[right]);
         }
     }
 }
 
-
-bool Bmp::DocAnh(const char* File)
+bool Bmp::Read(const char* File)
 {
 
 }
 
-bool Bmp::GhiAnh(const char* File)
+bool Bmp::Write(const char* File)
 {
 
 }
-
-
 
 
 
