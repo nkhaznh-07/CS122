@@ -1,19 +1,13 @@
 #include "Menu.h"
+#include "Bmp.h"
+#include "Read_Write.h"
+
 #include <iostream>
+
+//A50648_Nguyễn Duy Khánh
 
 using namespace std;
 
-/*
-Menu::Menu()
-{
-    //ctor
-}
-
-Menu::~Menu()
-{
-    //dtor
-}
-*/
 void Menu::setChoice(int c)
 {
     choice = c;
@@ -25,7 +19,8 @@ int Menu::getChoice() const
 }
 
 
-void Menu::menu()
+
+void Menu::menu(Bmp& img, Read_Write& rw)
 {
 
     do
@@ -52,24 +47,30 @@ void Menu::menu()
        switch (getChoice())
        {
             case 1:
-                Bmp::LatDoc();
+                img.LatDoc();
+                rw.Write("output.bmp", img);
                 cout << "Da quay nguoc anh" << endl;
                 break;
+
             case 2:
-                Bmp::LatNgang();
+                img.LatNgang();
+                rw.Write("output.bmp", img);
                 cout << "Da chuyen tu trai sang phai" << endl;
                 break;
+
             case 3:
-                Bmp::LatNgang()
+                img.LatNgang();
+                rw.Write("output.bmp", img);
                 cout << "Da chuyen tu phai sang trai" << endl;
                 break;
+
             case 4:
                 cout << "Thoat chuong trinh." << endl;
                 break;
+
             default:
                 cout << "Vui long chon lai!" << endl;
        }
     }
     while (getChoice() != 4);
 }
-

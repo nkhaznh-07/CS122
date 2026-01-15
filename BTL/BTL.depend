@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1767973336 source:d:\2026\btl\main.cpp
+	"Bmp.h"
+	"Read_Write.h"
+	"Menu.h"
+
+1767975055 source:d:\2026\btl\src\bmp.cpp
+	"Bmp.h"
+	<cstring>
+
+1768145060 d:\2026\btl\include\bmp.h
+	<iostream>
+
+1767975289 source:d:\2026\btl\src\menu.cpp
+	"Menu.h"
+	"Bmp.h"
+	"Read_Write.h"
+	<iostream>
+
+1768066782 d:\2026\btl\include\menu.h
+	"Bmp.h"
+	"Read_Write.h"
+
+1767973336 d:\2026\btl\include\read_write.h
+	"Bmp.h"
+
+1768145060 source:d:\2026\btl\src\read_write.cpp
+	"Read_Write.h"
+	<fstream>
+	<iostream>
+

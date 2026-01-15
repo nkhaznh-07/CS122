@@ -1,19 +1,22 @@
 #ifndef MENU_H
 #define MENU_H
 
-class Menu
-{
+#include "Bmp.h"
+#include "Read_Write.h"
+
+//A50648_Nguyễn Duy Khánh
+
+class Menu {
 private:
-    int choice = 0;
+    int choice ;
 
 public:
 
     void setChoice(int c);
     int getChoice() const;
 
-    void menu();
+    void menu(Bmp& img, Read_Write& rw);
+
 
 };
-
-
-#endif // MENU_H
+#endif // MENU.H
